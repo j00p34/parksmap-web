@@ -181,7 +181,8 @@
 
 
 	var grayscale = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
-			streets = L.tileLayer(mbUrl, {id: 'mapbox.streets', attribution: mbAttr});
+	                streets = L.tileLayer(mbUrl, {id: 'mapbox.streets', attribution: mbAttr}),
+			satellite = L.tileLayer(mbUrl, {id: 'mapbox.satellite', attribution: mbAttr});
 
 	var map = L.map('map', {
 		center: [27.60567, -18.19336],
@@ -191,7 +192,8 @@
 
 	var baseLayers = {
 		"Grayscale": grayscale,
-		"Streets": streets
+		"Streets": streets,
+		"Satellite": satellite
 	};
 
 	var overlays = {};
